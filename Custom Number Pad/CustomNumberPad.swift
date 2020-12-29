@@ -8,8 +8,11 @@
 import UIKit
 
 class CustomNumberPad: UIInputViewController {
+    
+    //Link this view to the XIB's file owner
     @IBOutlet var numberPad: UIView!
     
+    //One action for all text insertion buttons
     @IBAction func insertText(_ sender: UIButton) {
         if let text = sender.currentTitle {
             self.textDocumentProxy.insertText(text)
